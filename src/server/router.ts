@@ -7,6 +7,7 @@ import { api } from "./controllers/api";
 const apiRouter = Router();
 
 apiRouter.get("/", api.testApi);
+apiRouter.get("/acc", api.testAcc);
 
 //Не трогаем, react-приложение
 const mainRouter = Router();
