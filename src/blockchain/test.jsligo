@@ -1,0 +1,8 @@
+type block = [list<operation>, nat];
+
+let main = ([number, storage]: [nat, nat]): block => {
+  return [
+    (list([]) as list<operation>),
+    (storage + number)
+  ]
+}
