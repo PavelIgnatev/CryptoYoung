@@ -3,6 +3,7 @@ import express from "express";
 import { TezosToolkit } from "@taquito/taquito";
 
 import { Call } from './modules/call'
+import { acc } from "./modules/call";
 import { setupMiddlewares } from "./middlewares";
 import { PORT } from "./config";
 import { apiRouter, mainRouter } from "./router";
@@ -24,8 +25,21 @@ app.listen(PORT, () => {
   console.log(`Приложение успешно запущен на порту ${PORT}`);
 });
 
-// const RPC_URL = 'https://rpc.hangzhounet.teztnets.xyz'
-// const CONTRACT = 'KT1WVKzTbq6sEAnz5GLtcr4c2gg12BitPGHA' //адрес опубликованного контракта
-// const ADD = 10 //число, которое получит главная функция. Можете изменить его на другое
+// Deploy
+
+// deploy();
+
+// Change contract storage
+
+const RPC_URL = 'https://rpc.hangzhounet.teztnets.xyz'
+const CONTRACT = 'KT1TfcgreaNjC2YEqeMvRVzD7364RiNBjXvq' //адрес опубликованного контракта
+const ACC_BALANCE = acc.pkh
+
+const ADD = 10 //число, которое получит главная функция. Можете изменить его на другое
 // new Call(RPC_URL).add(ADD, CONTRACT)
+
+// // Activation of account
+
 // new Tx('https://rpc.hangzhounet.teztnets.xyz').activateAccount()
+
+
